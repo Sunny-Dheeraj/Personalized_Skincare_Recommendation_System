@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-pearl font-sans text-slate antialiased transition-colors duration-300 dark:bg-dusk dark:text-white;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  button,
+  input {
+    @apply outline-none;
+  }
+
+  ::selection {
+    @apply bg-aqua/40 text-dusk;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate/20 dark:bg-white/15;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply border border-white/40 bg-white/55 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-slate via-slate to-aqua bg-clip-text text-transparent dark:from-white dark:via-sand dark:to-aqua;
+  }
+}
