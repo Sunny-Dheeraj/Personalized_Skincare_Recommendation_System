@@ -7,7 +7,4 @@ __pycache__/
 .venv/
 .env
 .DS_Store
-*.pt
-*.pth
-*.pkl
 uploads/
